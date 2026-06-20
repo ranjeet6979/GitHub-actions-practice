@@ -2,7 +2,7 @@ name: Auto linter
 
 on:
   push:
-    paths: "*.py"
+    paths: "*.apy"
 
 jobs:
   linting:
