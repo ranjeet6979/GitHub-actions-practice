@@ -1,0 +1,13 @@
+name: Auto linter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v7
+    
