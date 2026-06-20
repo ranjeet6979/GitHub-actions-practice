@@ -10,4 +10,7 @@ jobs:
     steps:
       - name: code checkout
         uses: actions/checkout@v7
-    
+      - name: install ruff
+        run: pip install ruff
+      - name: lint check
+        run: ruff check .
