@@ -13,4 +13,6 @@ jobs:
     - name: echo-hello
       run: echo "Hello from GitHub Actions!"
     - name: print-date
-      run: date
+      run: |
+        echo "Current Date:"
+        date
