@@ -12,3 +12,5 @@ jobs:
       uses: actions/checkout@v7
     - name: echo-hello
       run: echo "Hello from GitHub Actions!"
+    - name: print-date
+      run: date
