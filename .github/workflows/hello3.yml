@@ -1,0 +1,14 @@
+name: hello workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greet-job:
+    name: greet-job-name
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout-code
+      uses: actions/checkout@v7
+    - name: echo-hello
+      run: echo "Hello from GitHub Actions!"
