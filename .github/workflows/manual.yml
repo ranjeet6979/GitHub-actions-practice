@@ -15,3 +15,5 @@ jobs:
     steps:
     - name: print environment
       run: echo "${{ inputs.name }}"
+    - name: print environment2
+      run: echo "${{ github.event.inputs.name }}"
