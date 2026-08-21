@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: print environment
-      run: echo "${{ github.inputs.name.options }}"
+      run: echo "${{ inputs.name }}"
