@@ -8,12 +8,10 @@ on:
         options: 
         - staging
         - production
-      message:
-        required: true
 
 jobs:
   manual-run-job:
     runs-on: ubuntu-latest
     steps:
-    - name: Send greeting
-      run: echo "${{ github.event.inputs.message }}"
+    - name: print environment
+      run: echo "${{ github.event.name.options }}"
