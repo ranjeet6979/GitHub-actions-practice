@@ -7,9 +7,9 @@ jobs:
     strategy:
       matrix:
         version:
-          - 3.10
-          - 3.11
-          - 3.12
+          - '3.10'
+          - '3.11'
+          - '3.12'
     runs-on: ubuntu-latest
     steps:
     - name: apt update
