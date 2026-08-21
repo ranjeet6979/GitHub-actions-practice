@@ -1,0 +1,19 @@
+name: manual run
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: choice
+        description: environment
+        options: 
+        - staging
+        - production
+      message:
+        required: true
+
+jobs:
+  manual-run-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: echo "${{ github.event.inputs.message }}"
