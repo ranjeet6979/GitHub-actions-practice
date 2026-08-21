@@ -5,6 +5,7 @@ on:
 jobs:
   python-matrix:
     strategy:
+      fail-fast: false
       matrix:
         exclude:
           - os: ubuntu-latest
