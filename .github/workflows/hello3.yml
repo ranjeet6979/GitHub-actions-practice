@@ -1,8 +1,6 @@
 name: hello workflow
-
 on:
   workflow_dispatch:
-
 jobs:
   greet-job:
     name: greet-job-name
@@ -10,7 +8,7 @@ jobs:
     steps:
     - name: checkout-code
       uses: actions/checkout@v7
+    - name: print-date
+      run: date      
     - name: echo-hello
       run: echo "Hello from GitHub Actions!"
-    - name: print-date
-      run: date
