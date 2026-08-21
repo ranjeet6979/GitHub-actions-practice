@@ -1,0 +1,19 @@
+name: matrix-check
+on:
+  workflow_dispatch:
+
+jobs:
+  python-matrix:
+    strategy:
+      matrix:
+        version:
+          - 3.10
+          - 3.11
+          - 3.12
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - uses: actions/setup-python@v7
+      with:
+        python-version: {{matrix.version}}
+    - run: python{{matrix.version}} --version
