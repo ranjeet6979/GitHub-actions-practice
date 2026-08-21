@@ -18,4 +18,4 @@ jobs:
     - name: list files in repo
       run: |
         echo "Files in Repo are:"
-        ls -ltrh
+        ls -laR
