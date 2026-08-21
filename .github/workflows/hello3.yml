@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
-    - cron: "30 17 * * *"
+    - cron: "36 17 * * *"
 jobs:
   greet-job:
     name: greet-job-name
