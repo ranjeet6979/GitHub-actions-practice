@@ -10,7 +10,10 @@ jobs:
           - '3.10'
           - '3.11'
           - '3.12'
-    runs-on: ubuntu-latest
+        os:
+          - 'ubuntu:latest'
+          - 'ubuntu-22.04-arm'
+    runs-on: ${{  matrix.os  }}
     steps:
     - name: apt update
       run: sudo apt-get update -y
