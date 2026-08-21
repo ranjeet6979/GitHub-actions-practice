@@ -7,3 +7,11 @@ on:
       - closed
     branches:
       - 'main'
+
+jobs:
+  pr-check-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Notify job run
+      run: |
+        echo "PR job running for: ${{ github.ref_name }}"
