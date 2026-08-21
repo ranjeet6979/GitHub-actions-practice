@@ -19,3 +19,7 @@ jobs:
       run: |
         echo "Files in Repo are:"
         ls -ltrha
+    - name: print runner OS
+      run: |
+        echo "Runner OS is:"
+        cat /etc/os-release
