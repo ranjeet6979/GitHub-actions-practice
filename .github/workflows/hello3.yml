@@ -1,9 +1,6 @@
 name: hello workflow
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
-    - cron: "15 23 * * *"
 jobs:
   greet-job:
     name: greet-job-name
