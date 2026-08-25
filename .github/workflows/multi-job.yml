@@ -18,7 +18,9 @@ jobs:
         run: echo "test..."  
   deploy:
     name: deploy job
-    needs: test
+    needs:
+      - build
+      - test
     runs-on: ubuntu-latest
     steps:
       - name: deploy
