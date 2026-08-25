@@ -1,0 +1,17 @@
+name: multi job
+on:
+  workflow_dispatch:
+
+jobs:
+  multi-branch:
+    name: multi-branch-job-name
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "build..."
+      - name: test
+        run: echo "test..."
+      - name: deploy
+        run: "deploy..."
+  
+  
