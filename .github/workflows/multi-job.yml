@@ -12,6 +12,6 @@ jobs:
       - name: test
         run: echo "test..."
       - name: deploy
-        run: "deploy..."
+        run: echo "deploy..."
   
   
