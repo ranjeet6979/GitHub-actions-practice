@@ -1,6 +1,6 @@
 name: smart-pipeline
 on:
-  push:
+  workflow_dispatch:
 
 jobs:
   lint:
