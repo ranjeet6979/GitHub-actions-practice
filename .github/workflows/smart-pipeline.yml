@@ -1,6 +1,6 @@
 name: smart-pipeline
 on:
-  push
+  push:
 
 jobs:
   lint:
@@ -22,4 +22,4 @@ jobs:
       - test
     steps:
       - name: summary-step
-        run: echo "this is summary job"
+        run: echo "this is summary job and push was from ${{  github.event.commits[0].message }}"
