@@ -1,7 +1,7 @@
 name: conditional
 on: workflow_dispatch
 jobs:
-  conditional-job:
+  conditional-job1:
     runs-on: ubuntu-latest
     steps:
       - name: check if main
@@ -15,3 +15,10 @@ jobs:
       - name: run if previous step failed
         if: ${{ failure() && steps.demo.conclusion == 'failure' }}
         run: echo "this runs if previous step fails" 
+
+  conditional-job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: on-push event
+        if: contains(fromJSON('["push"]'), github.event_name)
+        run: echo "this runs only if it is push event"
