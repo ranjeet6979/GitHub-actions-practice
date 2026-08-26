@@ -1,5 +1,8 @@
 name: conditional
-on: workflow_dispatch
+on: 
+  push:
+    branches: main
+
 jobs:
   conditional-job1:
     runs-on: ubuntu-latest
@@ -20,5 +23,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: on-push event
-        if: contains(fromJSON('["workflow_dispatch"]'), github.event_name)
+        if: contains(fromJSON('["push"]'), github.event_name)
         run: echo "this runs only if it is push event"
