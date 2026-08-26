@@ -1,4 +1,4 @@
-name: Run Real Tests
+name: Run python Tests
 
 on:
   workflow_dispatch:
