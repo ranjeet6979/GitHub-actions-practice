@@ -1,0 +1,23 @@
+name: Run Real Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
+
+      - name: Set Up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Install Dependencies
+        run: pip install -r python-app/requirements.txt
+
+      - name: Run Test Script
+        run: python python-app/calculator_test.py
