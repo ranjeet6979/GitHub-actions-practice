@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: generate file
-        run: echo "test file" >> artifact-file.txt
+        run: echo "test file" >> artifact-test-file.txt
       - uses: actions/upload-artifact@v7
         with:
           name: my-artifact
