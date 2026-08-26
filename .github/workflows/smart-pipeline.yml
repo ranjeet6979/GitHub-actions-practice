@@ -22,4 +22,4 @@ jobs:
       - test
     steps:
       - name: summary-step
-        run: echo "this is summary job and push was from ${{  github.event.commits[0].message }}"
+        run: echo "this is summary job and commit message was ${{  github.event.commits[0].message }}"
