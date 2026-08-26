@@ -20,5 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: on-push event
-        if: contains(fromJSON('["push"]'), github.event_name)
+        if: contains(fromJSON('["workflow_dispatch"]'), github.event_name)
         run: echo "this runs only if it is push event"
