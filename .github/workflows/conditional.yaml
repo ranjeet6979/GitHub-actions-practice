@@ -9,6 +9,7 @@ jobs:
         run: echo "this runs only if it is main branch"
 
       - name: failed step
+        id: demo
         run: exit 1
 
       - name: run if previous step failed
